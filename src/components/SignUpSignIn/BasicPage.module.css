@@ -1,0 +1,43 @@
+.page{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+}
+.left{
+    width:55%;
+    height: 100%;
+    display:flex;
+}
+.form{
+    margin:auto;
+}
+.right{
+    width:45%;
+    height:100%;
+    border-radius: 0 0 0 200px;
+    background: linear-gradient(180deg, #70A9FF 0%, #316EC9 54%, #024AB5 100%);
+    display:flex;
+    flex-direction: column;
+
+}
+.logo {
+  margin:auto;
+}
+.image {
+    width: 450px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.logo h1{
+    font-family: DM Sans;
+font-size: 96px;
+font-weight: 700;
+line-height: 32px;
+letter-spacing: -0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+
+
+}

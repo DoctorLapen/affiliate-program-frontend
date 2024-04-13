@@ -1,0 +1,49 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.main {
+    flex-grow: 1;
+    background: rgba(242, 242, 242, 1);
+
+
+}
+
+.toolsContainer {
+    margin-top: 50px;
+    margin-left: 37px;
+    margin-right: 44px;
+    display: flex;
+    justify-content: end;
+}
+
+.tools {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.offerButton {
+    width: 148px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #70A9FF 0%, #3773CC 54.5%, #034AB5 100%);
+    color:rgba(255, 255, 255, 1);
+    border: none;
+}
+
+.search {
+    width: 168px;
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+}
+
+.offerContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}

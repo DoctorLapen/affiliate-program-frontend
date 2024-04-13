@@ -1,0 +1,52 @@
+.offer {
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display:flex;
+}
+
+.form {
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    width: 472px;
+    height: 350px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 1);
+    margin: auto;
+    padding: 24px;
+}
+.form label{
+    margin: 5px 0;   
+font-family: Public Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+
+}
+.form input{
+width: 424px;
+height: 40px;
+
+border-radius: 4px;
+border: 1px solid rgb(134, 137, 138)
+
+}
+
+.left{
+    margin-top: 25px;
+    display: flex;
+    justify-content: end;
+}
+.left button {
+    width: 148px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #70A9FF 0%, #3773CC 54.5%, #034AB5 100%);
+    color:rgba(255, 255, 255, 1);
+    border: none;
+}

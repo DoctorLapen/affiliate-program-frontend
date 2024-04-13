@@ -1,0 +1,20 @@
+.offer{
+
+height: 44px;
+border-radius: 10px;
+background: rgba(255, 255, 255, 1);
+margin-left:37px;
+margin-right:44px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 17px;
+padding-right: 17px;
+}
+.status{
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
