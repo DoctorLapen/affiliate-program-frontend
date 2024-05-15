@@ -1,28 +1,33 @@
-.page{
+.page {
     width: 100vw;
     height: 100vh;
-    display:flex;
+    display: flex;
 }
-.left{
-    width:55%;
+
+.left {
+    width: 55%;
     height: 100%;
-    display:flex;
+    display: flex;
 }
-.form{
-    margin:auto;
+
+.form {
+    margin: auto;
 }
-.right{
-    width:45%;
-    height:100%;
+
+.right {
+    width: 45%;
+    height: 100%;
     border-radius: 0 0 0 200px;
     background: linear-gradient(180deg, #70A9FF 0%, #316EC9 54%, #024AB5 100%);
-    display:flex;
+    display: flex;
     flex-direction: column;
 
 }
+
 .logo {
-  margin:auto;
+    margin: auto;
 }
+
 .image {
     width: 450px;
     height: 350px;
@@ -30,14 +35,66 @@
     background-position: center;
     background-size: cover;
 }
-.logo h1{
+
+.logo h1 {
     font-family: DM Sans;
-font-size: 96px;
-font-weight: 700;
-line-height: 32px;
-letter-spacing: -0.02em;
-text-align: left;
-color: rgba(255, 255, 255, 1);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
 
 
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.signup .name {
+    width: 177px;
+    height: 20px;
+    padding: 12px 16px 12px 16px;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(224, 226, 231, 1);
+    margin-right: 10px;
+
+}
+
+.signup .email {
+    width: 177px;
+    height: 20px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(224, 226, 231, 1);
+    margin-left: 10px;
+}
+.signup .pass{
+    width: 410px;
+    height: 20px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 16px ;
+    border: 1px solid rgba(224, 226, 231, 1)
+}
+
+.signup .repeatpass{
+    width: 410px;
+    height: 20px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 16px ;
+    border: 1px solid rgba(224, 226, 231, 1)
+    
+}
+.signup button{
+    width: 218px;
+    height: 54px;
+    border:none;
+    border-radius: 16px;
+    color:white;
+    background: linear-gradient(90deg, #70A9FF 0%, #316EC9 57.5%, #0149B4 100%);
+    margin-top: 20px;
 }

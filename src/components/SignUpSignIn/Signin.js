@@ -4,51 +4,43 @@ import { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
-const SignUp = () => {
+const SignIn = () => {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
+
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value })
 
   };
   const onChangeForm = async (event) => {
     event.preventDefault();
-    navigate("/signin");
+    navigate("/signup");
   }
   const onSubmit = async (event) => {
     event.preventDefault();
     console.log(user);
       try {
-        let res = await axios.post("http://localhost:3000/signup",user);
+        let res = await axios.post("http://localhost:3000/signin",user);
         console.log(res.data);
-        
+        Cookies.set('token', res.data.token, { expires: 7 })
+        navigate("/brand");
      } catch (error) {
         console.log(error);
        
      }
-     try {
-      let res = await axios.post("http://localhost:3000/signin",user);
-      console.log(res.data);
-      Cookies.set('token', res.data.token, { expires: 7 })
-      navigate("/brand");
-   } catch (error) {
-      console.log(error);
-     
-   }
   }
   return (
     <form className={styles.signup}>
-      <h1>Rejestracja</h1>
+      <h1>Login</h1>
       <div>
-        <input type="text" className={styles.name} placeholder="Naswa" name="name" onChange={handleChange} />
         <input type="email" className={styles.email} placeholder="E-mail" name="email" onChange={handleChange} />
       </div>
       <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
-      <button onClick={onChangeForm}>signin</button>
+      <button onClick={onChangeForm}>signup</button>
       <button onClick={onSubmit}>login</button>
     </form>
   )
 }
 
-export default SignUp
+export default SignIn

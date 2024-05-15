@@ -1,13 +1,32 @@
 import React, { useState } from 'react'
 import styles from './AddOffer.module.css';
+import axios from 'axios';
+import Cookies from 'js-cookie';
 const AddOffer = ({addOffer}) => {
     const[data,setData] = useState({});
     const handleChange = (event) => {
-        setData({...data,[event.target.name]:[event.target.value]})
+        setData({...data,[event.target.name]:event.target.value})
         
       };
+      const sendOffer= async()=>{
+        try {
+          const token = Cookies.get('token');
+  
+          const login = await axios.post("http://localhost:3000/offers",data, {
+            headers: {
+              "Authorization": `Bearer ${token}`,
+            }
+          });
+          console.log(login.data);
+  
+        } catch (error) {
+          console.log(error);
+  
+        }
+      }
       const handleSubmit= () => {
         addOffer(data);
+        sendOffer();
       };
   return (
     <div className={styles.offer} >
