@@ -29,7 +29,7 @@ const Brand = () => {
         setOffers([...res.data.offers]);
       } catch (error) {
         console.log(error);
-         navigate("/signup");
+       //  navigate("/signup");
       }
     }
     fetchOffers();
