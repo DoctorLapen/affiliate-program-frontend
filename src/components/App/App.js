@@ -5,17 +5,11 @@ import BasicPage from '../SignUpSignIn/BasicPage'
 import SignUp from '../SignUpSignIn/SignUp'
 import SignIn from '../SignUpSignIn/Signin'
 import Redirect from '../Redirect/Redirect'
-import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 
 const App = () => {
-  const navigate = useNavigate();
   useEffect(() => {
-    //Runs only on the first render
-    
-    //   navigate("/signup");
-         console.log("App");
-   
+    console.log("App");
   }, []);
   return (
     <Routes>

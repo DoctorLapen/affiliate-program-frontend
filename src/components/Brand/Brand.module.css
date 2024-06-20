@@ -35,12 +35,25 @@
 }
 
 .search {
+    padding-left: 15px;
     width: 168px;
     height: 44px;
     border-radius: 10px;
     border: none;
 }
-
+.offerTitle {
+        height:68px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 1);
+        margin-left:37px;
+        margin-right:44px;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 17px;
+        padding-right: 17px;
+}
 .offerContainer {
     margin-top: 50px;
     display: flex;

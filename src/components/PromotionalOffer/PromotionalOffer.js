@@ -5,13 +5,17 @@ import  falseIcon  from '../../assets/images/StatusFalse.png'
 const PromotionalOffer = ({uid,offer,brand,payments,balance,status}) => {
   return (
     <section className={styles.offer}>
-        <span>{uid}</span>
-        <span>{offer}</span>
-        <span>{brand}</span>
-        <span>${payments}</span>
-        <span>${balance}</span>
-        <span className={styles.status} 
-        style={{ backgroundImage: `url(${status ? trueIcon:falseIcon})` }}></span>
+        <span style={{width:"50px"}}>{uid}</span>
+        <span style={{width:"100px"}}>{offer}</span>
+        <span style={{width:"100px"}}>{brand}</span>
+        <span style={{width:"125px"}}>${payments}</span>
+        <span style={{width:"100px"}}>${balance}</span>
+        <span style={{width:"50px",height:"19px"}}>
+        <div className={styles.status} 
+        style={{ backgroundImage: `url(${status ? trueIcon:falseIcon})`}}>
+
+        </div>
+        </span>
     </section>
   )
 }
