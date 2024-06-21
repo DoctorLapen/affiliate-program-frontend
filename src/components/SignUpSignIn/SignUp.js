@@ -51,7 +51,6 @@ const SignUp = () => {
         <input type="text" className={styles.name} placeholder="Naswa" name="name" onChange={handleChange} />
         <input type="email" className={styles.email} placeholder="E-mail" name="email" onChange={handleChange} />
       </div>
-      <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
       <div className={styles.err}>{err}</div>
       <button className={styles.changemode} onClick={onChangeForm}>Zaloguj się</button>
