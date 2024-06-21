@@ -45,8 +45,8 @@ const SignUp = () => {
       </div>
       <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
-      <button onClick={onChangeForm}>Zaloguj się</button>
-      <button onClick={onSubmit}>Załóż konto</button>
+      <button className={styles.changemode} onClick={onChangeForm}>Zaloguj się</button>
+      <button className={styles.submit} onClick={onSubmit}>Załóż konto</button>
     </form>
   )
 }
