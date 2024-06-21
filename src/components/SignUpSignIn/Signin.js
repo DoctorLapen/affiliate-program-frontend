@@ -32,9 +32,7 @@ const SignIn = () => {
   return (
     <form className={styles.signup}>
       <h1>Login</h1>
-      <div>
-        <input type="email" className={styles.email} placeholder="E-mail" name="email" onChange={handleChange} />
-      </div>
+      <input type="email" className={styles.email} placeholder="E-mail" name="email" onChange={handleChange} style={{width:"410px",marginLeft:"0"}}/>
       <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
       <button onClick={onChangeForm}>signup</button>
