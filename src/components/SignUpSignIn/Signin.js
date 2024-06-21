@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
 const SignIn = () => {
   const [user, setUser] = useState({});
+  const [err, setErr] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -23,10 +24,12 @@ const SignIn = () => {
         let res = await axios.post("http://localhost:3000/signin",user);
         console.log(res.data);
         Cookies.set('token', res.data.token, { expires: 7 })
+        setErr("");
         navigate("/brand");
      } catch (error) {
         console.log(error);
-       
+        console.log(error.response.data.message);
+        setErr(error.response.data.message);
      }
   }
   return (
@@ -35,6 +38,7 @@ const SignIn = () => {
       <input type="email" className={styles.email} placeholder="E-mail" name="email" onChange={handleChange} style={{width:"410px",marginLeft:"0"}}/>
       <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
+      <div className={styles.err}>{err}</div>
       <button  className={styles.changemode} onClick={onChangeForm}>Rejestracja</button>
       <button className={styles.submit} onClick={onSubmit}>Zaloguj się</button>
     </form>

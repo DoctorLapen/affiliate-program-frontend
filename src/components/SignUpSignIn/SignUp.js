@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
   const [user, setUser] = useState({});
+  const [err, setErr] = useState("");
   const navigate = useNavigate();
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value })
@@ -21,20 +22,21 @@ const SignUp = () => {
       try {
         let res = await axios.post("http://localhost:3000/signup",user);
         console.log(res.data);
-        
+        setErr("");
+        try {
+          let res = await axios.post("http://localhost:3000/signin",user);
+          console.log(res.data);
+          Cookies.set('token', res.data.token, { expires: 7 })
+          navigate("/brand");
+       } catch (error) {
+          console.log(error);
+          setErr(error.response.data.message);
+       }
      } catch (error) {
-        console.log(error);
-       
+        console.log(error.response.data.message);
+        setErr(error.response.data.message);
      }
-     try {
-      let res = await axios.post("http://localhost:3000/signin",user);
-      console.log(res.data);
-      Cookies.set('token', res.data.token, { expires: 7 })
-      navigate("/brand");
-   } catch (error) {
-      console.log(error);
      
-   }
   }
   return (
     <form className={styles.signup}>
@@ -45,6 +47,7 @@ const SignUp = () => {
       </div>
       <label htmlFor="password">Hasło</label>
       <input type="password" className={styles.pass} id="password" name="password" placeholder="Haslo" onChange={handleChange} />
+      <div className={styles.err}>{err}</div>
       <button className={styles.changemode} onClick={onChangeForm}>Zaloguj się</button>
       <button className={styles.submit} onClick={onSubmit}>Załóż konto</button>
     </form>
