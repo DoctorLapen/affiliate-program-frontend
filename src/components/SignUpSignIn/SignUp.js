@@ -19,6 +19,12 @@ const SignUp = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     console.log(user);
+    const result = Object.values(user).some((item) => item === '');
+    console.log(result);
+    if(result){
+      setErr("Wszystkie pola nie są wypełnione");
+      return;
+    }
       try {
         let res = await axios.post("http://localhost:3000/signup",user);
         console.log(res.data);
