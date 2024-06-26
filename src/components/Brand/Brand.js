@@ -38,6 +38,7 @@ const Brand = () => {
     setShow(true);
   }
   const addOffer = (offer)=>{
+    console.log(offer)
     setOffers([...offers,offer]);
     setShow(false);
   }
@@ -62,7 +63,7 @@ const Brand = () => {
         <div style={{width:"50px"}}>Status</div>
       </div>
         {
-          offers.map(offer=><PromotionalOffer uid={offer.uid} offer={offer.offer} brand={offer.brand} payments={offer.payments}balance={0}status={false}/>)
+          offers.map(offer=><PromotionalOffer uid={offer.uid} offer={offer.offer} brand={offer.brand} payments={offer.payments}balance={0}status={offer.status}/>)
         }
       </div>
     </main>

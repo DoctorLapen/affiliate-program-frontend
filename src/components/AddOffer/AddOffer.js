@@ -8,7 +8,7 @@ const AddOffer = ({addOffer}) => {
         setData({...data,[event.target.name]:event.target.value})
         
       };
-      const sendOffer= async()=>{
+      const sendOffer= async(data)=>{
         try {
           const token = Cookies.get('token');
   
@@ -25,8 +25,9 @@ const AddOffer = ({addOffer}) => {
         }
       }
       const handleSubmit= () => {
-        addOffer(data);
-        sendOffer();
+        const d = {...data,"status":Math.random() >= 0.5}
+        addOffer(d);
+        sendOffer(d);
       };
   return (
     <div className={styles.offer} >
