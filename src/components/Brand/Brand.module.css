@@ -47,12 +47,16 @@
         background: rgba(255, 255, 255, 1);
         margin-left:37px;
         margin-right:44px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-left: 17px;
         padding-right: 17px;
+}
+.item {   
+ font-size: 15pt;  
+ font-weight: bold;
 }
 .offerContainer {
     margin-top: 50px;

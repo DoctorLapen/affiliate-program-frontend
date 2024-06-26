@@ -55,12 +55,12 @@ const Brand = () => {
       
       <div className={styles.offerContainer}>
       <div className={styles.offerTitle}>
-        <div style={{width:"50px"}}>UID</div>
-        <div style={{width:"100px"}}>Nazwa</div>
-        <div style={{width:"100px"}}>Marka</div>
-        <div style={{width:"125px"}}>Płacić</div>
-        <div style={{width:"100px"}}>Balansować</div>
-        <div style={{width:"50px"}}>Status</div>
+        <div className={styles.item} style={{width:"50px"}}>UID</div>
+        <div className={styles.item}  style={{width:"100px"}}>Nazwa</div>
+        <div className={styles.item} style={{width:"100px"}}>Marka</div>
+        <div className={styles.item} style={{width:"125px"}}>Płacić</div>
+        <div className={styles.item} style={{width:"100px"}}>Balansować</div>
+        <div className={styles.item}  style={{width:"50px"}}>Status</div>
       </div>
         {
           offers.map(offer=><PromotionalOffer uid={offer.uid} offer={offer.offer} brand={offer.brand} payments={offer.payments}balance={0}status={offer.status}/>)
